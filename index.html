@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahil Siddiqui — Frontend Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">SS<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="openHireDialog()">Hire Me ✦</button>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <ul>
+    <li><a href="#about" onclick="closeDrawer()">About</a></li>
+    <li><a href="#education" onclick="closeDrawer()">Education</a></li>
+    <li><a href="#skills" onclick="closeDrawer()">Skills</a></li>
+    <li><a href="#projects" onclick="closeDrawer()">Projects</a></li>
+    <li><a href="#contact" onclick="closeDrawer()">Contact</a></li>
+    <li><button onclick="openHireDialog(); closeDrawer();" class="btn-primary" style="border:none;cursor:pointer;width:100%;">Hire Me ✦</button></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════ HERO (NO CHANGE) ═══════ -->
+<section id="hero">
+  <div class="wrapper">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">
+          <div class="pulse"></div>
+          Available for freelance work
+        </div>
+        <h1 class="hero-title">
+          Sahil<br>
+          <span class="line2">Siddiqui</span><br>
+          <span class="accent">Frontend </span><br>
+          <span class="line2">& Flutter Dev.</span><br>
+        </h1>
+        <p class="hero-desc">
+          I build clean landing pages, sleek frontend interfaces, and cross-platform mobile apps with Flutter & Dart — focused on performance, design, and seamless user experience.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">View Projects →</a>
+          <a href="#" class="btn-ghost" onclick="openHireDialog(); return false;">Hire Me on Fiverr</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/sahilsiddiqui-dev" target="_blank" class="social-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.16c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.79 1.29 3.47.99.1-.77.42-1.29.76-1.59-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/mohd-sahil-siddiqui" target="_blank" class="social-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.fiverr.com/s/WE2rQVR" target="_blank" class="social-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-1.85c.2-.658.45-1.29.45-2.21C20.608 6.6 18.5 4.5 14.85 4.5c-3.004 0-5.25 1.71-5.987 4.18H7.196c.025-.14.05-.28.05-.43a2.3 2.3 0 0 0-2.3-2.3 2.3 2.3 0 0 0-2.3 2.3 2.3 2.3 0 0 0 2.28 2.3H5.58c-.45 1.0-.73 2.18-.73 3.38v1.48H2.22A2.22 2.22 0 0 0 0 17.63v3.37h9.87v-3.37a2.22 2.22 0 0 0-2.22-2.22H6.4v-1.48c0-.96.2-1.83.52-2.6h1.85c.62 2.08 2.42 3.49 4.75 3.49 2.7 0 4.65-1.77 4.65-4.35 0-.22-.02-.43-.05-.63h1.85c0 .2-.02.42-.02.63 0 2.56 1.92 4.35 4.5 4.35.22 0 .43-.02.63-.05v2.77h2.01v-4.12a2.22 2.22 0 0 0-2.22-2.22l.03-.03z"/></svg>
+            Fiverr
+          </a>
+          <a href="assets/resume.pdf" target="_blank" class="social-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-8-6z"/><polyline points="14 2 14 8 20 8" style="fill:none;stroke:currentColor;stroke-width:2"/><line x1="12" y1="13" x2="8" y2="13" style="stroke:currentColor;stroke-width:2"/><line x1="12" y1="17" x2="8" y2="17" style="stroke:currentColor;stroke-width:2"/></svg>
+            Resume
+          </a>
+        </div>
+      </div>
+      <div class="hero-avatar">SS</div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════ END HERO ═══════════════ -->
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrapper">
+    <p class="section-label fade-up">// who i am</p>
+    <h2 class="section-title fade-up">About Me</h2>
+    <div class="divider fade-up"></div>
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <p>I'm <strong>Mohd Sahil Siddiqui</strong>, a Computer Science student in my 2nd year with a clear focus — building things for the web and cross-platform apps that look great and work even better.</p>
+        <p>My stack centers around modern frontend technologies. I craft responsive landing pages, interactive UIs with React, and cross-platform mobile apps using Flutter and Dart. Every project I ship is clean, purposeful, and production-ready.</p>
+        <p>I'm early in my journey — and that means I bring curiosity, consistency, and zero bad habits. I've already deployed real projects used by real people, and I'm just getting started.</p>
+        <div class="about-tags">
+          <span class="about-tag">⚡ Fast Learner</span>
+          <span class="about-tag">🎯 Detail Oriented</span>
+          <span class="about-tag">📱 Cross-Platform</span>
+          <span class="about-tag">🌐 Frontend Focused</span>
+        </div>
+      </div>
+      <div class="about-stats fade-up">
+        <div class="stat-card">
+          <div class="stat-number">2+</div>
+          <div class="stat-label">Live Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2yr</div>
+          <div class="stat-label">CS Student</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2028</div>
+          <div class="stat-label">Graduating</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrapper">
+    <p class="section-label fade-up">// academic path</p>
+    <h2 class="section-title fade-up">Education</h2>
+    <div class="divider fade-up"></div>
+
+    <div class="edu-timeline">
+      <div class="edu-item fade-up">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-connector"></div>
+        <div class="edu-card">
+          <div class="edu-badge current">Current</div>
+          <div class="edu-year">2024 – 2028</div>
+          <h3 class="edu-title">B.Tech — Computer Science</h3>
+          <div class="edu-institution">KIET Group of Institutions, Ghaziabad</div>
+          <div class="edu-grade">
+            <span class="grade-label">CGPA</span>
+            <span class="grade-value">7.31</span>
+          </div>
+          <p class="edu-note">Specializing in web technologies, cross-platform development and software engineering fundamentals.</p>
+        </div>
+      </div>
+
+      <div class="edu-item fade-up">
+        <div class="edu-icon">📚</div>
+        <div class="edu-connector"></div>
+        <div class="edu-card">
+          <div class="edu-year">2022 – 2023</div>
+          <h3 class="edu-title">12th Standard — PCM </h3>
+          <div class="edu-institution">Golden FLower Public School</div>
+          <div class="edu-grade">
+            <span class="grade-label">Score</span>
+            <span class="grade-value">82%</span>
+          </div>
+          <p class="edu-note">Science stream with Mathematics and Computer Science as core subjects.</p>
+        </div>
+      </div>
+
+      <div class="edu-item fade-up">
+        <div class="edu-icon">📖</div>
+        <div class="edu-connector"></div>
+        <div class="edu-card">
+          <div class="edu-year">2020 – 2021</div>
+          <h3 class="edu-title">10th Standard</h3>
+          <div class="edu-institution">Delhi Public School</div>
+          <div class="edu-grade">
+            <span class="grade-label">Score</span>
+            <span class="grade-value">81%</span>
+          </div>
+          <p class="edu-note">Strong academic foundation with distinction in Mathematics and Science.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrapper">
+    <p class="section-label fade-up">// tech stack</p>
+    <h2 class="section-title fade-up">Skills & Tools</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-sub fade-up">Technologies I work with regularly to build web interfaces and cross-platform applications.</p>
+
+    <div class="skills-grid fade-up">
+
+      <div class="skill-group">
+        <div class="skill-group-label">🌐 Core Web</div>
+        <div class="skill-cards-row">
+          <div class="skill-card"><div class="skill-icon" style="background:#e34f2615;color:#e34f26">H</div><div class="skill-name-s">HTML5</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#1572b615;color:#1572b6">C</div><div class="skill-name-s">CSS3</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#f7df1e15;color:#f7df1e">JS</div><div class="skill-name-s">JavaScript</div></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">⚛️ Frameworks & Libraries</div>
+        <div class="skill-cards-row">
+          <div class="skill-card"><div class="skill-icon" style="background:#61dafb15;color:#61dafb">Re</div><div class="skill-name-s">React.js</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#38bdf815;color:#38bdf8">Tw</div><div class="skill-name-s">Tailwind</div></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">📱 Mobile & Cross-Platform</div>
+        <div class="skill-cards-row">
+          <div class="skill-card"><div class="skill-icon" style="background:#54c5f815;color:#54c5f8">Fl</div><div class="skill-name-s">Flutter</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#0553b115;color:#0553b1">Da</div><div class="skill-name-s">Dart</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#3ddc8415;color:#3ddc84">As</div><div class="skill-name-s">Android Studio</div></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">🔥 Backend & Deployment</div>
+        <div class="skill-cards-row">
+          <div class="skill-card"><div class="skill-icon" style="background:#ffca2815;color:#ffca28">Fi</div><div class="skill-name-s">Firebase</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#fff15;color:#fff">Ve</div><div class="skill-name-s">Vercel</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#00c7b715;color:#00c7b7">Ne</div><div class="skill-name-s">Netlify</div></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">🛠️ Dev Tools</div>
+        <div class="skill-cards-row">
+          <div class="skill-card"><div class="skill-icon" style="background:#f0502615;color:#f05026">Gi</div><div class="skill-name-s">Git</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#ffffff15;color:#ffffff">GH</div><div class="skill-name-s">GitHub</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#fcc62415;color:#fcc624">Li</div><div class="skill-name-s">Linux</div></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">💻 Languages</div>
+        <div class="skill-cards-row">
+          <div class="skill-card"><div class="skill-icon" style="background:#00599c15;color:#00599c">C++</div><div class="skill-name-s">C++</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#a8b9cc15;color:#a8b9cc">C</div><div class="skill-name-s">C</div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:#a78bfa15;color:#a78bfa">OO</div><div class="skill-name-s">OOP</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrapper">
+    <p class="section-label fade-up">// what i've built</p>
+    <h2 class="section-title fade-up">Projects</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-sub fade-up">Real projects, deployed and live — built to solve real problems.</p>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<script>
+/* ═══════════════════════════════════════════
+   PROJECTS DATA — edit here to add/remove cards
+   ═══════════════════════════════════════════ */
+const PROJECTS = [
+  {
+    featured: true,                          // spans full width, shows mockup
+    tag: { type: "live", label: "✦ Live Project" },
+    title: "Sundarban Adventure",
+    desc: "A professional web presence for a local tour guide — showcasing services, collecting bookings, and displaying testimonials. Smooth animations, clean layout, mobile-first design.",
+    stack: ["HTML", "CSS", "JavaScript", "Animations"],
+    demo: "https://sahilsiddiqui-dev.github.io/Sundarban-Adventure",
+    github: "https://github.com/SahilSiddiqui-dev/Sundarban-Adventure",
+    preview: "assets/sundarban-adventure.webp",  // set to image path e.g. "assets/sundarban-adventure.jpg" to show screenshot,
+  },
+  {
+    featured: true,
+    tag: { type: "college", label: "🏫 College Project" },
+    title: "Community Notice Board",
+    desc: "A web app for colony residents to view announcements, post buy/sell/rent listings, and track local events — all stored in localStorage.",
+    stack: ["HTML", "CSS", "JavaScript", "localStorage"],
+    demo: "https://sahilsiddiqui-dev.github.io/Community-Notice-board-Website/",
+    github: "https://github.com/SahilSiddiqui-dev/Community-Notice-board-Website",
+    preview: "assets/community.webp" ,   // set to image path e.g. "assets/community-notice-board.jpg" to show screenshot
+  },
+  {
+    featured: true,
+    tag: { type: "wip", label: "🚧 In Progress" },
+    title: "Stride — A Todo App",
+    desc: "A Todo app built with Flutter and Dart, with smooth slide animations and local storage persistence. Targeting both Android and future iOS builds.",
+    stack: ["Flutter", "Dart", "Firebase", "Android Studio"],
+    demo: null,      // set to null if no live demo
+    github: "https://github.com/SahilSiddiqui-dev/Stride-A_Todo_App",
+    preview: "assets/mobile.webp",
+  },
+  // ── ADD YOUR NEXT PROJECT HERE ──────────────────────────────────
+  // {
+  //   featured: false,
+  //   tag: { type: "live", label: "✦ Live Project" },
+  //   title: "Your Project Name",
+  //   desc: "Short description of what it does.",
+  //   stack: ["React", "TailwindCSS", "Firebase"],
+  //   demo: "https://your-demo-link.com",
+  //   github: "https://github.com/SahilSiddiqui-dev/your-repo",
+  //   preview: null,
+  // },
+];
+
+/* ═══════════════════════════════════════════
+   COMPONENTS — don't touch unless redesigning
+   ═══════════════════════════════════════════ */
+const GH_ICON = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.16c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.79 1.29 3.47.99.1-.77.42-1.29.76-1.59-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>`;
+
+function renderTag({ type, label }) {
+  return `<span class="project-tag tag-${type}">${label}</span>`;
+}
+
+function renderStack(stack) {
+  return stack.map(s => `<span class="stack-badge">${s}</span>`).join('');
+}
+
+function renderLinks({ demo, github, featured }) {
+  const demoBtn  = demo   ? `<a href="${demo}"   target="_blank" class="link-btn link-live">↗ Live Demo</a>` : '';
+  const ghLabel  = demo   ? 'GitHub' : 'View on GitHub';
+  const githubBtn = github ? `<a href="${github}" target="_blank" class="link-btn link-github">${GH_ICON} ${ghLabel}</a>` : '';
+  return demoBtn + githubBtn;
+}
+
+function renderMockup({ preview }) {
+  const inner = preview
+    ? `<img src="${preview}" alt="Project preview" style="width:100%;height:150px;object-fit:cover;object-position:top;display:block;" loading="lazy" onerror="this.style.display='none'">`
+    : `<div class="mockup-content">
+         <div class="mockup-hero"></div>
+         <div class="mockup-rows">
+           <div class="mockup-row wide"></div>
+           <div class="mockup-row medium"></div>
+           <div class="mockup-row short"></div>
+         </div>
+       </div>`;
+  return `
+    <div class="project-mockup">
+      <div class="mockup-bar"><span></span><span></span><span></span></div>
+      ${inner}
+    </div>`;
+}
+
+function renderFeaturedMockup({ preview }) {
+  if (!preview) {
+    return `
+      <div class="project-mockup featured-mockup">
+        <div class="mockup-bar"><span></span><span></span><span></span></div>
+        <div class="mockup-content">
+          <div class="mockup-hero"></div>
+          <div class="mockup-rows">
+            <div class="mockup-row wide"></div>
+            <div class="mockup-row medium"></div>
+            <div class="mockup-row short"></div>
+          </div>
+        </div>
+      </div>`;
+  }
+  return `<img src="${preview}" alt="Project preview" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" loading="lazy" onerror="this.style.display='none'" class="featured-project-image">`;
+}
+
+function renderFeaturedCard(p) {
+  return `
+    <div class="project-card featured fade-up">
+      <div class="featured-image">
+        ${renderFeaturedMockup(p)}
+      </div>
+      <div class="featured-content">
+        <div class="featured-label">Featured Project</div>
+        <h3 class="project-title">${p.title}</h3>
+        <p class="project-desc">${p.desc}</p>
+        <div class="project-stack">${renderStack(p.stack)}</div>
+        <div class="project-links">${renderLinks(p)}</div>
+      </div>
+    </div>`;
+}
+
+function renderCard(p) {
+  return `
+    <div class="project-card fade-up">
+      ${renderMockup(p)}
+      <div class="project-meta">${renderTag(p.tag)}</div>
+      <h3 class="project-title">${p.title}</h3>
+      <p class="project-desc">${p.desc}</p>
+      <div class="project-stack">${renderStack(p.stack)}</div>
+      <div class="project-links">${renderLinks(p)}</div>
+    </div>`;
+}
+
+/* ── RENDER ── */
+document.getElementById('projectsGrid').innerHTML =
+  PROJECTS.map(p => p.featured ? renderFeaturedCard(p) : renderCard(p)).join('');
+
+</script>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrapper">
+    <p class="section-label fade-up">// get in touch</p>
+    <h2 class="section-title fade-up">Contact</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-sub fade-up">Have a project in mind? Let's talk. I'm available for freelance and collaboration.</p>
+
+    <div class="contact-cards fade-up">
+      <a href="mailto:sahil.siddiqui.dev0@gmail.com" class="contact-card">
+        <div class="contact-card-icon email-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </div>
+        <div class="contact-card-info">
+          <div class="contact-card-label">Email</div>
+          <div class="contact-card-value">sahil.siddiqui.dev0@gmail.com</div>
+        </div>
+        <div class="contact-card-arrow">→</div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/mohd-sahil-siddiqui/" target="_blank" class="contact-card">
+        <div class="contact-card-icon linkedin-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </div>
+        <div class="contact-card-info">
+          <div class="contact-card-label">LinkedIn</div>
+          <div class="contact-card-value">linkedin.com/in/sahilsiddiqui-dev</div>
+        </div>
+        <div class="contact-card-arrow">→</div>
+      </a>
+
+      <a href="https://github.com/sahilsiddiqui-dev" target="_blank" class="contact-card">
+        <div class="contact-card-icon github-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.16c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.06 1.82 2.79 1.29 3.47.99.1-.77.42-1.29.76-1.59-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </div>
+        <div class="contact-card-info">
+          <div class="contact-card-label">GitHub</div>
+          <div class="contact-card-value">github.com/sahilsiddiqui-dev</div>
+        </div>
+        <div class="contact-card-arrow">→</div>
+      </a>
+    </div>
+
+    <div class="availability-strip fade-up">
+      <div class="pulse"></div>
+      <span>Currently available for freelance projects — typically respond within 2–4 hours (9 AM – 6 PM IST)</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="wrapper">
+  <footer>
+    <span>© 2026 Mohd Sahil Siddiqui · Built with HTML, CSS &amp; JS</span>
+    <div class="footer-links">
+      <a href="https://github.com/sahilsiddiqui-dev" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/mohd-sahil-siddiqui/" target="_blank">LinkedIn</a>
+      <a href="https://www.fiverr.com/s/WE2rQVR" target="_blank">Fiverr</a>
+    </div>
+  </footer>
+</div>
+
+<!-- HIRE ME DIALOG -->
+<div class="dialog-overlay" id="hireDialog" onclick="closeHireDialog(event)">
+  <div class="dialog-box">
+    <button class="dialog-close" onclick="closeHireDialog()">✕</button>
+    <div class="dialog-header">
+      <div class="dialog-title">Let's Work Together</div>
+      <div class="dialog-sub">Choose your preferred platform to hire me</div>
+    </div>
+    <div class="dialog-cards">
+      <a href="https://www.fiverr.com/s/WE2rQVR" target="_blank" class="dialog-platform fiverr">
+        <div class="dp-logo" style="background:rgba(29,191,115,0.15);color:#1dbf73;font-size:1.3rem;font-family:'Syne',sans-serif;font-weight:800;">fi</div>
+        <div class="dp-info">
+          <div class="dp-name">Fiverr</div>
+          <div class="dp-desc">Browse gig packages, pick a plan and let's build.</div>
+          <div class="dp-status"><span class="dp-dot" style="background:#1dbf73"></span> Active · Responds in &lt;2 hrs</div>
+        </div>
+        <div class="dp-arrow">↗</div>
+      </a>
+      <a href="https://www.freelancer.in/u/sahilsiddiquidev?sb=t" target="_blank" class="dialog-platform freelancer">
+        <div class="dp-logo" style="background:rgba(41,182,246,0.15);color:#29b6f6;font-size:1.3rem;font-family:'Syne',sans-serif;font-weight:800;">F</div>
+        <div class="dp-info">
+          <div class="dp-name">Freelancer.in</div>
+          <div class="dp-desc">Milestone-based contracts, secure payments.</div>
+          <div class="dp-status"><span class="dp-dot" style="background:#29b6f6"></span> Active · Responds in &lt;1 hr</div>
+        </div>
+        <div class="dp-arrow">↗</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
