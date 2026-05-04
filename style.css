@@ -88,23 +88,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 2px;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: transform 0.3s ease;
 }
-
-.nav-logo:hover {
-  transform: scale(1.05);
-}
-
-.logo-img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-}
-
 .nav-logo span { color: var(--accent2); }
 
 .nav-links { display: flex; gap: 2rem; list-style: none; }
