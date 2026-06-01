@@ -1,54 +1,159 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mohd Sahil Siddiqui — Personal Portfolio
 
-## Getting Started
+> **Live site →** [sahilsiddiqui.site](https://sahilsiddiqui.site)
 
-First, run the development server:
+A high-performance, single-page developer portfolio showcasing my work as a Frontend & Flutter Engineer. Built with the latest Next.js 16 + React 19, styled with Tailwind CSS v4, and supercharged with a built-in AI Assistant powered by Anthropic's Claude API.
+
+---
+
+## ✨ Features
+
+| Section | Description |
+|---|---|
+| **Hero** | Animated intro with live "Available for freelance" badge, CTA buttons, and social links |
+| **About** | Personal background and what I do |
+| **Education** | B.Tech CS at KIET Ghaziabad (7.31 CGPA) |
+| **Skills & Tools** | Interactive skill cards with mouse-tracking glow effects |
+| **Projects** | Showcase of selected web & mobile projects |
+| **Contact** | Direct contact form powered by EmailJS |
+| **AI Assistant** | Floating Claude-powered chatbot that answers questions about me, my skills, and services — with a built-in lead capture form |
+| **Hire Dialog** | Quick modal to initiate hiring conversations |
+
+### 🤖 AI Chatbot
+A floating chat widget (bottom-right) lets visitors:
+- Ask questions about my skills, projects, and services
+- Submit a **lead form** directly inside the chat
+- The bot wiggles every 15 seconds to grab attention and shows a notification bubble after 3 seconds
+
+---
+
+## 🛠 Tech Stack
+
+![Tech Stack](./public/assets/tech-stack-banner.png)
+
+| Layer | Technology |
+|---|---|
+| **Framework** | [Next.js 16](https://nextjs.org/) (App Router) |
+| **UI Library** | [React 19](https://react.dev/) |
+| **Language** | [TypeScript 5](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) + Vanilla CSS custom properties |
+| **AI** | [Anthropic Claude](https://www.anthropic.com/) (via `/api/chat` route) |
+| **Email** | [EmailJS](https://www.emailjs.com/) (contact & lead forms) |
+| **Deployment** | [Vercel](https://vercel.com/) |
+| **Mobile Expertise** | Flutter · Dart · Android Studio |
+
+---
+
+## 📁 Project Structure
+
+```
+d:\Portfolio\
+├── public/
+│   └── assets/          # Images, resume PDF, tech-stack banner
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── chat/    # Claude AI API route
+│   │   ├── globals.css  # Design system tokens & animations
+│   │   ├── layout.tsx   # Root layout with SEO metadata
+│   │   └── page.tsx     # Main page (assembles all sections)
+│   └── components/
+│       ├── AIAssistant.tsx   # Floating AI chatbot + lead form
+│       ├── About.tsx
+│       ├── Contact.tsx
+│       ├── Education.tsx
+│       ├── Footer.tsx
+│       ├── Hero.tsx
+│       ├── HireDialog.tsx
+│       ├── Navbar.tsx
+│       ├── Projects.tsx
+│       └── Skills.tsx
+├── next.config.ts
+├── package.json
+└── tsconfig.json
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** ≥ 18
+- **npm** (comes with Node.js)
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sahilsiddiqui-dev/portfolio.git
+cd portfolio
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env.local` file in the project root:
+
+```env
+# Anthropic Claude AI (for the AI Assistant chatbot)
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# EmailJS (for the contact form and lead capture)
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+> **Where to get these:**
+> - Anthropic API key → [console.anthropic.com](https://console.anthropic.com)
+> - EmailJS credentials → [emailjs.com](https://www.emailjs.com)
+
+### 4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 5. Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site is deployed on **Vercel** and auto-deploys on every push to `main`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/sahilsiddiqui-dev/portfolio)
 
-## Deploy on Vercel
+Make sure to add all environment variables from `.env.local` to your Vercel project's Environment Variables settings.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Connect
 
-## Live AI Chatbot Setup
+- 🌍 **Website:** [sahilsiddiqui.site](https://sahilsiddiqui.site)
+- 💼 **LinkedIn:** [mohd-sahil-siddiqui](https://linkedin.com/in/mohd-sahil-siddiqui)
+- 🐙 **GitHub:** [sahilsiddiqui-dev](https://github.com/sahilsiddiqui-dev)
+- 🎯 **Fiverr:** [Hire me on Fiverr](https://www.fiverr.com/s/WE2rQVR)
+- 📧 **Email:** sahil.siddiqui.dev0@gmail.com
 
-To activate the live intelligence stream inside Sahil's AI assistant (and transition from the offline mock fallback to live responses), configure your API keys:
+---
 
-### 1. Local Development
-Open the [.env.local](file:///d:/Portfolio/.env.local) file located in the root of the project:
-* Replace `your_anthropic_api_key_here` with your live **Anthropic Claude API Key** (highly recommended for premium copywriting).
-* Alternatively, replace `your_gemini_api_key_here` with your **Google Gemini API Key**.
+## 📄 License
 
-Next.js automatically loads these variables when you run `npm run dev`.
+This project is open source and available under the [MIT License](LICENSE).
 
-### 2. Production Deployment (e.g. Vercel)
-Navigate to your project dashboard (e.g., Vercel, Netlify):
-1. Go to **Settings** > **Environment Variables**.
-2. Add a new variable named `ANTHROPIC_API_KEY` (or `GEMINI_API_KEY`).
-3. Set its value to your live API key and save.
-4. Trigger a redeployment. The API route will automatically connect to the live LLM streams!
+---
+
+<p align="center">Designed & built by <strong>Mohd Sahil Siddiqui</strong> · <a href="https://sahilsiddiqui.site">sahilsiddiqui.site</a></p>
