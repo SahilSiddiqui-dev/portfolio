@@ -29,18 +29,7 @@ A floating chat widget (bottom-right) lets visitors:
 
 ## 🛠 Tech Stack
 
-![Tech Stack](./public/assets/tech-stack-banner.png)
-
-| Layer | Technology |
-|---|---|
-| **Framework** | [Next.js 16](https://nextjs.org/) (App Router) |
-| **UI Library** | [React 19](https://react.dev/) |
-| **Language** | [TypeScript 5](https://www.typescriptlang.org/) |
-| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) + Vanilla CSS custom properties |
-| **AI** | [Anthropic Claude](https://www.anthropic.com/) (via `/api/chat` route) |
-| **Email** | [EmailJS](https://www.emailjs.com/) (contact & lead forms) |
-| **Deployment** | [Vercel](https://vercel.com/) |
-| **Mobile Expertise** | Flutter · Dart · Android Studio |
+<img src="https://skillicons.dev/icons?i=typescript,react,tailwind,next" />
 
 ---
 
