@@ -6,7 +6,7 @@ ABOUT SAHIL:
 - Frontend & Flutter Developer, B.Tech CS student (2024-2028) at KIET Group of Institutions, Ghaziabad. CGPA: 7.31.
 - Builds modern websites, responsive UIs, landing pages, portfolios, and Flutter apps.
 
-SKILLS: HTML5, CSS3, JavaScript, React.js, Tailwind CSS, Flutter, Dart, Firebase, Vercel, Netlify, Git, GitHub, C++, OOP.
+SKILLS: HTML5, CSS3, JavaScript, React.js, Tailwind CSS, Flutter, Dart, Firebase, Vercel, Netlify, Git, GitHub, C++, OOP, AI Chatbot Development.
 
 SERVICES:
 - Custom AI Chatbot Integration (Just like the AI Assistant you are talking to right now! Sahil can design, build, and embed an intelligent, custom AI chatbot tailored to your business, services, or portfolio to engage visitors and capture leads automatically).
@@ -117,7 +117,7 @@ export async function POST(request: Request) {
     let reply = "I'm Sahil's AI assistant. I'm currently running in offline preview mode. How can I help you learn more about Sahil's work?";
 
     if (lower.includes("skill") || lower.includes("tech") || lower.includes("stack") || lower.includes("tool")) {
-      reply = "Sahil specializes in Web Frontend and Flutter mobile development. His key skills include HTML5, CSS3, JavaScript, React.js, Tailwind CSS, Flutter, Dart, Firebase, Git/GitHub, and C++. He specializes in building fast, clean, responsive UIs.";
+      reply = "Sahil specializes in Web Frontend, Flutter mobile development, and AI integration. His key skills include HTML5, CSS3, JavaScript, React.js, Tailwind CSS, Flutter, Dart, Firebase, Git/GitHub, C++, and AI Chatbot Development. He specializes in building fast, clean, responsive UIs.";
     } else if (lower.includes("project") || lower.includes("work") || lower.includes("built") || lower.includes("showcase")) {
       reply = "Sahil has built several live projects: \n1. Sundarban Adventure - A mobile-first tourist portal built in HTML/CSS/JS.\n2. Community Notice Board - A colony-level posting and announcements board with localStorage.\n3. School Official Website - A responsive React and Tailwind administration site.\n4. Stride - A premium Todo app built in Flutter and Dart. \nWhich one would you like to hear about?";
     } else if (lower.includes("education") || lower.includes("college") || lower.includes("kiet") || lower.includes("degree")) {

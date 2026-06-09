@@ -3,7 +3,7 @@
 import React from "react";
 
 export default function About() {
-  const tags = ["⚡ Clean Code", "🎯 Detail Oriented", "📱 Cross-Platform", "🌐 Frontend Focused"];
+  const tags = ["⚡ Clean Code", "🤖 AI Chatbots", "🎯 Detail Oriented", "📱 Cross-Platform", "🌐 Frontend Focused"];
   
   const stats = [
     { number: "2+", label: "Live Projects" },
@@ -24,7 +24,7 @@ export default function About() {
               I&apos;m <strong>Mohd Sahil Siddiqui</strong>, a Computer Science student in my 2nd year with a clear focus — building things for the web and cross-platform apps that look great and work even better.
             </p>
             <p>
-              My stack centers around modern frontend technologies. I craft responsive landing pages, interactive UIs with React, and cross-platform mobile apps using Flutter and Dart. Every project I ship is clean, purposeful, and production-ready.
+              My stack centers around modern frontend technologies and AI integration. I craft responsive landing pages, interactive UIs with React, cross-platform mobile apps using Flutter and Dart, and intelligent features like AI Chatbot Development. Every project I ship is clean, purposeful, and production-ready.
             </p>
             <p>
               I bring consistent execution, professional clean-code practices, and a sharp eye for detail. Having already built and deployed real-world applications used by real users, I focus on shipping highly reliable and optimized digital products.

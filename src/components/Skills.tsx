@@ -81,6 +81,12 @@ export default function Skills() {
       ],
     },
     {
+      category: "🤖 AI & Integration",
+      items: [
+        { name: "AI Chatbot Development", abbr: "AI", bg: "rgba(124,106,255,0.08)", color: "#7c6aff" },
+      ],
+    },
+    {
       category: "🛠️ Dev Tools",
       items: [
         { name: "Git", abbr: "Gi", bg: "rgba(240,80,38,0.08)", color: "#f05026" },
