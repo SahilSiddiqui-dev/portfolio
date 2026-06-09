@@ -40,7 +40,7 @@ const PROJECTS: Project[] = [
     title: "School Official Website",
     desc: "A responsive school website that centralizes all essential details and enables online inquiries, saving time for both families and staff.",
     stack: ["React", "TailwindCSS", "Firebase"],
-    demo: "https://akashschoolofficialdemo.netlify.app/",
+    demo: "https://akash-school-demo.vercel.app/",
     github: "https://github.com/SahilSiddiqui-dev/School_Demo",
     preview: "/assets/school.webp",
   },
