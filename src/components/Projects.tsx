@@ -17,6 +17,16 @@ const PROJECTS: Project[] = [
   {
     featured: true,
     tag: { type: "live", label: "✦ Live Project" },
+    title: "CityBite — Food SaaS",
+    desc: "A premium multi-tenant food ordering platform for local restaurants. Features interactive dark-themed storefronts, customizable menu add-ons, and a streamlined mobile-first checkout workflow.",
+    stack: ["Next.js", "React", "TailwindCSS", "TypeScript"],
+    demo: "https://restaurent-three-ashen.vercel.app/",
+    github: "https://github.com/SahilSiddiqui-dev/CityBite",
+    preview: "/assets/restaurent.png",
+  },
+  {
+    featured: true,
+    tag: { type: "live", label: "✦ Live Project" },
     title: "Sundarban Adventure",
     desc: "A professional web presence for a local tour guide — showcasing services, collecting bookings, and displaying testimonials. Smooth animations, clean layout, mobile-first design.",
     stack: ["HTML", "CSS", "JavaScript", "Animations"],
