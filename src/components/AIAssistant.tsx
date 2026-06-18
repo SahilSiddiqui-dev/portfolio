@@ -22,41 +22,13 @@ export default function AIAssistant() {
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const [showNotification, setShowNotification] = useState(false);
-  const [shouldWiggle, setShouldWiggle] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
 
   useEffect(() => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [messages, isTyping]);
-
-  useEffect(() => {
-    // Trigger wiggle and notification tooltip after 3 seconds
-    const notificationTimer = setTimeout(() => {
-      setShowNotification(true);
-      setShouldWiggle(true);
-    }, 3000);
-
-    // Stop wiggling after 1.3s so hover transition works normally
-    const wiggleTimer = setTimeout(() => {
-      setShouldWiggle(false);
-    }, 4300);
-
-    // Periodically re-trigger wiggle every 15 seconds to grab attention
-    const periodicWiggleInterval = setInterval(() => {
-      setShouldWiggle(true);
-      setTimeout(() => {
-        setShouldWiggle(false);
-      }, 1300);
-    }, 15000);
-
-    return () => {
-      clearTimeout(notificationTimer);
-      clearTimeout(wiggleTimer);
-      clearInterval(periodicWiggleInterval);
-    };
-  }, []);
 
   const renderMessageContent = (content: string) => {
     return content.split("\n").map((line, i) => {
@@ -211,10 +183,9 @@ export default function AIAssistant() {
           </button>
         </div>
       )}
-
       {/* Floating Toggle Button */}
       <button
-        className={`ai-chat-bubble-toggle ${shouldWiggle ? "wiggle" : ""}`}
+        className="ai-chat-bubble-toggle"
         onClick={toggleChat}
         aria-label={isOpen ? "Close AI Assistant" : "Open AI Assistant"}
       >

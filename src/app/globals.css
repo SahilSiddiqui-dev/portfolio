@@ -1251,20 +1251,23 @@ footer {
   align-items: center;
   justify-content: center;
   z-index: 999;
-  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 1;
   transform: scale(1) translateY(0);
   pointer-events: all;
-  animation: popInToggle 0.6s cubic-bezier(0.34,1.56,0.64,1);
+  animation: premiumPopIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards, buttonPulse 3s infinite ease-in-out;
 }
 .ai-chat-bubble-toggle:hover {
-  transform: scale(1.08) translateY(-2px);
+  transform: scale(1.06) translateY(-2px);
   background: var(--accent2);
 }
 .ai-chat-bubble-toggle svg {
   width: 26px;
   height: 26px;
-  transition: transform 0.3s;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ai-chat-bubble-toggle:hover svg {
+  transform: scale(1.08) rotate(10deg);
 }
 
 .ai-chat-container {
@@ -1283,8 +1286,8 @@ footer {
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(20px) scale(0.95);
-  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  transform: translateY(20px) scale(0.96);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .ai-chat-container.open {
   opacity: 1;
@@ -1504,13 +1507,13 @@ footer {
   cursor: pointer;
   opacity: 1;
   transform: scale(1) translateY(0);
-  animation: notificationPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transition: all 0.3s;
+  animation: premiumNotificationFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .ai-chat-notification:hover {
-  transform: translateY(-4px);
-  border-color: rgba(124, 106, 255, 0.3);
-  box-shadow: 0 20px 45px rgba(124, 106, 255, 0.15), 0 16px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+  border-color: rgba(124, 106, 255, 0.25);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), 0 12px 24px rgba(124, 106, 255, 0.08);
 }
 
 .ai-chat-notification-avatar {
@@ -1569,10 +1572,21 @@ footer {
   color: var(--text);
 }
 
-@keyframes notificationPop {
+@keyframes premiumNotificationFadeIn {
   from {
     opacity: 0;
-    transform: scale(0.9) translateY(20px);
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes premiumPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
   }
   to {
     opacity: 1;
@@ -1580,33 +1594,31 @@ footer {
   }
 }
 
-@keyframes popInToggle {
-  from {
-    opacity: 0;
-    transform: scale(0) translateY(40px);
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 8px 24px rgba(124, 106, 255, 0.4);
   }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+  50% {
+    box-shadow: 0 8px 32px rgba(124, 106, 255, 0.6), 0 0 0 8px rgba(124, 106, 255, 0.12);
   }
-}
-
-@keyframes wiggleToggle {
-  0%, 100% {
-    transform: scale(1) translateY(0);
-  }
-  15%, 45%, 75% {
-    transform: scale(1.08) translateY(-6px) rotate(-8deg);
-    box-shadow: 0 16px 35px rgba(124, 106, 255, 0.6);
-  }
-  30%, 60%, 90% {
-    transform: scale(1.08) translateY(-6px) rotate(8deg);
-    box-shadow: 0 16px 35px rgba(124, 106, 255, 0.6);
+  100% {
+    box-shadow: 0 8px 24px rgba(124, 106, 255, 0.4);
   }
 }
 
-.ai-chat-bubble-toggle.wiggle {
-  animation: wiggleToggle 1.2s ease;
+@keyframes pulseAnim {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
 }
 
 @media (max-width: 480px) {
