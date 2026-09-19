@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { POST as saasPost } from "./saasChatHandler";
+
 
 const SYSTEM_PROMPT = `You are Sahil's AI Portfolio Assistant. Represent Sahil Siddiqui professionally.
 
@@ -33,7 +35,15 @@ RULES:
 
 export async function POST(request: Request) {
   try {
-    const { messages } = await request.json();
+    const clonedRequest = request.clone();
+    const body = await request.json();
+
+    // Route SaaS client requests to separate saasChatHandler
+    if (body.clientTime || body.clientTimezone) {
+      return saasPost(clonedRequest);
+    }
+
+    const { messages } = body;
 
     if (!messages || !Array.isArray(messages)) {
       return NextResponse.json({ error: "Invalid request payload" }, { status: 400 });

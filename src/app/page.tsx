@@ -50,6 +50,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Animated Background Blobs */}
+      <div className="blob blob1" aria-hidden="true" />
+      <div className="blob blob2" aria-hidden="true" />
+
       {/* Structural layout navbar */}
       <Navbar onOpenHire={openHire} />
 

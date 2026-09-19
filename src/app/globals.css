@@ -1,4 +1,10 @@
+@layer base, portfolio, utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap');
+
+@import "tailwindcss";
+
+@layer portfolio {
 
 /* ═══════════════════════════════════════════════════════════════
    SAHIL SIDDIQUI — PORTFOLIO  |  style.css (Migrated to Next.js)
@@ -1627,4 +1633,5 @@ footer {
     right: 1rem;
     width: calc(100% - 2rem);
   }
+}
 }

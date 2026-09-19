@@ -48,10 +48,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* Animated Background Blobs */}
-        <div className="blob blob1" aria-hidden="true" />
-        <div className="blob blob2" aria-hidden="true" />
-        
         {children}
       </body>
     </html>
