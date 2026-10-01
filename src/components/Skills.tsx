@@ -22,7 +22,7 @@ function SkillCard({ name, abbr, bg, color }: SkillItem) {
     const rect = card.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
-    
+
     setGlowStyle({
       background: `radial-gradient(circle at ${x}% ${y}%, rgba(124,106,255,0.08) 0%, var(--surface) 70%)`,
     });
@@ -50,56 +50,44 @@ function SkillCard({ name, abbr, bg, color }: SkillItem) {
 export default function Skills() {
   const skills: SkillGroup[] = [
     {
-      category: "🌐 Core Web",
+      category: "⚙️ Backend",
       items: [
-        { name: "HTML5", abbr: "H", bg: "rgba(227,79,38,0.08)", color: "#e34f26" },
-        { name: "CSS3", abbr: "C", bg: "rgba(21,114,182,0.08)", color: "#1572b6" },
-        { name: "JavaScript", abbr: "JS", bg: "rgba(247,223,30,0.08)", color: "#f7df1e" },
-      ],
-    },
-    {
-      category: "⚛️ Frameworks & Libraries",
-      items: [
-        { name: "React.js", abbr: "Re", bg: "rgba(97,218,251,0.08)", color: "#61dafb" },
-        { name: "Tailwind", abbr: "Tw", bg: "rgba(56,189,248,0.08)", color: "#38bdf8" },
-      ],
-    },
-    {
-      category: "📱 Mobile & Cross-Platform",
-      items: [
-        { name: "Flutter", abbr: "Fl", bg: "rgba(84,197,248,0.08)", color: "#54c5f8" },
-        { name: "Dart", abbr: "Da", bg: "rgba(5,83,177,0.08)", color: "#0553b1" },
-        { name: "Android Studio", abbr: "As", bg: "rgba(61,220,132,0.08)", color: "#3ddc84" },
-      ],
-    },
-    {
-      category: "🔥 Backend & Deployment",
-      items: [
-        { name: "Firebase", abbr: "Fi", bg: "rgba(255,202,40,0.08)", color: "#ffca28" },
-        { name: "Vercel", abbr: "Ve", bg: "rgba(255,255,255,0.08)", color: "#fff" },
-        { name: "Netlify", abbr: "Ne", bg: "rgba(0,199,183,0.08)", color: "#00c7b7" },
-      ],
-    },
-    {
-      category: "🤖 AI & Integration",
-      items: [
-        { name: "AI Chatbot Development", abbr: "AI", bg: "rgba(124,106,255,0.08)", color: "#7c6aff" },
-      ],
-    },
-    {
-      category: "🛠️ Dev Tools",
-      items: [
-        { name: "Git", abbr: "Gi", bg: "rgba(240,80,38,0.08)", color: "#f05026" },
-        { name: "GitHub", abbr: "GH", bg: "rgba(255,255,255,0.08)", color: "#ffffff" },
-        { name: "Linux", abbr: "Li", bg: "rgba(252,198,36,0.08)", color: "#fcc624" },
+        { name: "Node.js", abbr: "No", bg: "rgba(104,160,99,0.08)", color: "#68a063" },
+        { name: "Express.js", abbr: "Ex", bg: "rgba(153,153,153,0.08)", color: "#999999" },
+        { name: "MongoDB", abbr: "Mo", bg: "rgba(71,162,72,0.08)", color: "#47a248" },
+        { name: "REST APIs", abbr: "API", bg: "rgba(255,255,255,0.08)", color: "#ffffff" },
+        { name: "MVC", abbr: "MVC", bg: "rgba(167,139,250,0.08)", color: "#a78bfa" },
+        { name: "Middleware", abbr: "Mw", bg: "rgba(97,218,251,0.08)", color: "#61dafb" },
       ],
     },
     {
       category: "💻 Languages",
       items: [
-        { name: "C++", abbr: "C++", bg: "rgba(0,89,156,0.08)", color: "#00599c" },
-        { name: "C", abbr: "C", bg: "rgba(168,185,204,0.08)", color: "#a8b9cc" },
-        { name: "OOP", abbr: "OO", bg: "rgba(167,139,250,0.08)", color: "#a78bfa" },
+        { name: "C++ (DSA)", abbr: "C++", bg: "rgba(0,89,156,0.08)", color: "#00599c" },
+        { name: "JavaScript (ES6+)", abbr: "JS", bg: "rgba(247,223,30,0.08)", color: "#f7df1e" },
+        { name: "TypeScript", abbr: "TS", bg: "rgba(49,120,198,0.08)", color: "#3178c6" },
+        { name: "Dart", abbr: "Da", bg: "rgba(5,83,177,0.08)", color: "#0553b1" },
+      ],
+    },
+    {
+      category: "🌐 Frontend",
+      items: [
+        { name: "HTML5", abbr: "H", bg: "rgba(227,79,38,0.08)", color: "#e34f26" },
+        { name: "CSS3", abbr: "C", bg: "rgba(21,114,182,0.08)", color: "#1572b6" },
+        { name: "React", abbr: "Re", bg: "rgba(97,218,251,0.08)", color: "#61dafb" },
+        { name: "Next.js", abbr: "Nx", bg: "rgba(255,255,255,0.08)", color: "#ffffff" },
+        { name: "Tailwind CSS", abbr: "Tw", bg: "rgba(56,189,248,0.08)", color: "#38bdf8" },
+        { name: "Flutter", abbr: "Fl", bg: "rgba(84,197,248,0.08)", color: "#54c5f8" },
+      ],
+    },
+    {
+      category: "☁️ Cloud & Tools",
+      items: [
+        { name: "AWS (EC2, S3, IAM, VPC)", abbr: "AWS", bg: "rgba(255,153,0,0.08)", color: "#ff9900" },
+        { name: "Linux (RHEL)", abbr: "Li", bg: "rgba(252,198,36,0.08)", color: "#fcc624" },
+        { name: "Bash", abbr: "Ba", bg: "rgba(78,170,37,0.08)", color: "#4eaa25" },
+        { name: "Git", abbr: "Gi", bg: "rgba(240,80,38,0.08)", color: "#f05026" },
+        { name: "GitHub", abbr: "GH", bg: "rgba(255,255,255,0.08)", color: "#ffffff" },
       ],
     },
   ];
