@@ -5,17 +5,17 @@ import { POST as saasPost } from "./saasChatHandler";
 const SYSTEM_PROMPT = `You are Sahil's AI Portfolio Assistant. Represent Sahil Siddiqui professionally.
 
 ABOUT SAHIL:
-- Frontend & Flutter Developer, B.Tech CS student (2024-2028) at KIET Group of Institutions, Ghaziabad. CGPA: 7.31.
-- Builds modern websites, responsive UIs, landing pages, portfolios, and Flutter apps.
+- Backend Developer, B.Tech CS student (2024-2028) at KIET Group of Institutions, Ghaziabad. CGPA: 7.33.
+- Builds REST APIs and modern web applications with Node.js, Express, and MongoDB. AWS Certified.
 
-SKILLS: HTML5, CSS3, JavaScript, React.js, Tailwind CSS, Flutter, Dart, Firebase, Vercel, Netlify, Git, GitHub, C++, OOP, AI Chatbot Development.
+SKILLS: Node.js, Express.js, MongoDB, REST APIs, MVC, Middleware, C++, JavaScript, TypeScript, Dart, HTML5, CSS3, React, Next.js, Tailwind CSS, Flutter, AWS, Linux, Bash, Git, GitHub.
 
 SERVICES:
 - Custom AI Chatbot Integration (Just like the AI Assistant you are talking to right now! Sahil can design, build, and embed an intelligent, custom AI chatbot tailored to your business, services, or portfolio to engage visitors and capture leads automatically).
 - Portfolio & Business Websites (Sleek, fully responsive, and highly optimized).
 - High-Converting Landing Pages (Pixel-perfect layouts focused on conversions).
-- Sleek React/Next.js Frontend Development.
-- Cross-platform Mobile Apps with Flutter & Dart.
+- Sleek React/Next.js Web Applications.
+- Backend APIs with Node.js, Express, and MongoDB.
 - Website Redesign & Optimization.
 
 PROJECTS:
@@ -127,13 +127,13 @@ export async function POST(request: Request) {
     let reply = "I'm Sahil's AI assistant. I'm currently running in offline preview mode. How can I help you learn more about Sahil's work?";
 
     if (lower.includes("skill") || lower.includes("tech") || lower.includes("stack") || lower.includes("tool")) {
-      reply = "Sahil specializes in Web Frontend, Flutter mobile development, and AI integration. His key skills include HTML5, CSS3, JavaScript, React.js, Tailwind CSS, Flutter, Dart, Firebase, Git/GitHub, C++, and AI Chatbot Development. He specializes in building fast, clean, responsive UIs.";
+      reply = "Sahil is a Backend Developer specializing in Node.js, Express, and MongoDB. He is also AWS Certified and proficient in C++, React, Next.js, Tailwind CSS, and has knowledge of Flutter and Dart.";
     } else if (lower.includes("project") || lower.includes("work") || lower.includes("built") || lower.includes("showcase")) {
-      reply = "Sahil has built several live projects: \n1. Sundarban Adventure - A mobile-first tourist portal built in HTML/CSS/JS.\n2. Community Notice Board - A colony-level posting and announcements board with localStorage.\n3. School Official Website - A responsive React and Tailwind administration site.\n4. Stride - A premium Todo app built in Flutter and Dart. \nWhich one would you like to hear about?";
+      reply = "Sahil has built several live projects: \n1. CityBite - A food SaaS platform built in Next.js.\n2. Sundarban Adventure - A mobile-first tourist portal.\n3. School Official Website - A responsive React administration site.\n4. Stride - A Todo app built in Flutter and Dart. \nWhich one would you like to hear about?";
     } else if (lower.includes("education") || lower.includes("college") || lower.includes("kiet") || lower.includes("degree")) {
-      reply = "Sahil is pursuing his B.Tech in Computer Science at KIET Group of Institutions, Ghaziabad (2024-2028), holding a current CGPA of 7.31. He has a strong academic focus on software engineering, OOP fundamentals, and practical project builds.";
+      reply = "Sahil is pursuing his B.Tech in Computer Science at KIET Group of Institutions, Ghaziabad (2024-2028), holding a current CGPA of 7.33. He has a strong academic focus on software engineering, OOP fundamentals, and practical project builds.";
     } else if (lower.includes("service") || lower.includes("offer") || lower.includes("price") || lower.includes("cost")) {
-      reply = "Sahil offers professional freelance services including:\n1. Custom AI Chatbot Integration – Just like me! Sahil can design, build, and embed an intelligent custom chatbot tailored to your site to engage users and collect leads automatically.\n2. Portfolio & Business Websites – Sleek, fully responsive, and highly optimized.\n3. High-Converting Landing Pages – Pixel-perfect layouts focused on conversions.\n4. Cross-Platform Mobile Apps – Built using Flutter and Dart for iOS and Android.\nWhich of these services are you looking for?";
+      reply = "Sahil offers professional freelance services including:\n1. Custom AI Chatbot Integration – Just like me! Sahil can design, build, and embed an intelligent custom chatbot tailored to your site to engage users and collect leads automatically.\n2. Portfolio & Business Websites – Sleek, fully responsive, and highly optimized.\n3. High-Converting Landing Pages – Pixel-perfect layouts focused on conversions.\n4. Backend APIs & Web Apps – Built with Node.js, Express, and React/Next.js.\nWhich of these services are you looking for?";
     } else if (lower.includes("hire") || lower.includes("website") || lower.includes("app") || lower.includes("freelance")) {
       reply = "Based on your requirements, this sounds like a project Sahil could help with. I'd love to collect your details so he can reach out. Please provide your contact details in the form below!";
     } else if (lower.includes("contact") || lower.includes("email") || lower.includes("reach") || lower.includes("social")) {
