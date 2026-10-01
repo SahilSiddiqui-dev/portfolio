@@ -15,7 +15,7 @@ export default function AIAssistant() {
     {
       role: "bot",
       content:
-        "Hi there! I'm Sahil's AI assistant. Sahil is a Frontend & Flutter Developer open to freelance work — he builds clean, responsive websites and mobile apps.",
+        "Hi there! I'm Sahil's AI assistant. Sahil is a Backend Developer open to freelance work — he builds REST APIs and modern web applications.",
       chips: ["See his skills", "View projects", "I need a website", "Hire Sahil"],
     },
   ]);
@@ -33,7 +33,7 @@ export default function AIAssistant() {
   const renderMessageContent = (content: string) => {
     return content.split("\n").map((line, i) => {
       const trimmed = line.trim();
-      
+
       // Check if it's a bullet item starting with - or *
       if (trimmed.startsWith("-") || trimmed.startsWith("*")) {
         const text = trimmed.substring(1).trim();
@@ -44,7 +44,7 @@ export default function AIAssistant() {
           </div>
         );
       }
-      
+
       // Check if it's a numbered item starting with a number and a dot
       const numMatch = trimmed.match(/^(\d+)\.(.*)$/);
       if (numMatch) {
@@ -57,7 +57,7 @@ export default function AIAssistant() {
           </div>
         );
       }
-      
+
       return <p key={i} style={{ marginBottom: line.trim() ? "6px" : "12px", minHeight: line.trim() ? "0px" : "8px" }}>{line}</p>;
     });
   };
@@ -72,7 +72,7 @@ export default function AIAssistant() {
       return ["See projects", "What services do you offer?", "Hire Sahil"];
     }
     if (lower.includes("project")) {
-      return ["Tell me about Flutter app", "What websites has he built?"];
+      return ["Tell me about backend projects", "What websites has he built?"];
     }
     if (lower.includes("service")) {
       return ["I need a website", "I need a mobile app", "What does it cost?"];
@@ -130,7 +130,7 @@ export default function AIAssistant() {
         lower.includes("form below") ||
         lower.includes("project sahils could help with") ||
         lower.includes("project sahil could help with");
-      
+
       const chips = getChips(lower);
 
       setMessages((prev) => [
@@ -225,7 +225,7 @@ export default function AIAssistant() {
               {msg.role === "bot" && <div className="ai-chat-msg-avatar">SS</div>}
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div className="ai-chat-bubble">{renderMessageContent(msg.content)}</div>
-                
+
                 {/* Chip suggestions */}
                 {msg.chips && (
                   <div className="ai-chat-chips">
@@ -287,9 +287,9 @@ export default function AIAssistant() {
 // ── AUXILIARY LEAD FORM SUBMISSION COMPONENT (DECOUPLED FOR RECONCILIATION STABILITY) ──
 // ── VALIDATION HELPERS ──
 const TEMP_EMAIL_DOMAINS = [
-  "mailinator.com","guerrillamail.com","10minutemail.com","tempmail.com",
-  "throwam.com","yopmail.com","trashmail.com","sharklasers.com","fakeinbox.com",
-  "maildrop.cc","dispostable.com","spamgourmet.com","getairmail.com","getnada.com",
+  "mailinator.com", "guerrillamail.com", "10minutemail.com", "tempmail.com",
+  "throwam.com", "yopmail.com", "trashmail.com", "sharklasers.com", "fakeinbox.com",
+  "maildrop.cc", "dispostable.com", "spamgourmet.com", "getairmail.com", "getnada.com",
 ];
 
 const isValidName = (v: string) => /^[a-zA-Z\s'-]{2,50}$/.test(v.trim());
@@ -374,7 +374,7 @@ const LeadForm = () => {
 
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
-    const publicKey  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY  || "";
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
     if (!serviceId || !templateId || !publicKey) {
       setTimeout(() => { setSubmitted(true); setIsSending(false); }, 800);
@@ -464,7 +464,7 @@ const LeadForm = () => {
       <div style={{ display: "flex", flexDirection: "column" }}>
         <input
           type="text"
-          placeholder="Project Type (e.g. Flutter App) *"
+          placeholder="Project Type (e.g. Web App / API) *"
           value={projectType}
           onChange={(e) => { setProjectType(e.target.value); if (errors.projectType) setErrors(p => ({ ...p, projectType: undefined })); }}
           disabled={isSending}

@@ -15,11 +15,11 @@ export default function Hero() {
             <h1 className="hero-title">
               Mohd Sahil<br />
               <span className="line2">Siddiqui</span><br />
-              <span className="accent">Frontend &amp; </span><br />
-              <span className="line2">Flutter Engineer</span><br />
+              <span className="accent">Backend </span><br />
+              <span className="line2">Developer</span><br />
             </h1>
             <p className="hero-desc">
-              I design and build high-performance web interfaces and cross-platform mobile apps that deliver real business value — currently pursuing my B.Tech in Computer Science at KIET Ghaziabad (7.31 CGPA).
+              I design and build high-performance web applications and REST APIs that deliver real business value — currently pursuing my B.Tech in Computer Science at KIET Ghaziabad (7.33 CGPA).
             </p>
             <div className="hero-actions">
               <a href="#projects" className="btn-primary">
