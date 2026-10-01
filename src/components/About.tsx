@@ -3,13 +3,18 @@
 import React from "react";
 
 export default function About() {
-  const tags = ["⚡ Clean Code", "🤖 AI Chatbots", "🎯 Detail Oriented", "📱 Cross-Platform", "🌐 Frontend Focused"];
+  const tags = [
+    "Business and portfolio websites",
+    "Landing pages",
+    "Web applications (React/Next.js)",
+    "Backend APIs with Node.js, Express, and MongoDB"
+  ];
   
   const stats = [
-    { number: "2+", label: "Live Projects" },
-    { number: "15+", label: "Technologies" },
-    { number: "2yr", label: "CS Student" },
+    { number: "3rd", label: "Year CS Student" },
     { number: "2028", label: "Graduating" },
+    { number: "AWS", label: "Certified" },
+    { number: "2+", label: "Live Projects" },
   ];
 
   return (
@@ -21,15 +26,12 @@ export default function About() {
         <div className="about-grid">
           <div className="about-text fade-up">
             <p>
-              I&apos;m <strong>Mohd Sahil Siddiqui</strong>, a Computer Science student in my 2nd year with a clear focus — building things for the web and cross-platform apps that look great and work even better.
+              I&apos;m Mohd Sahil, a backend developer who builds REST APIs and web applications with Node.js, Express, and MongoDB. I&apos;m a third-year B.Tech Computer Science student at KIET Group of Institutions, Ghaziabad (batch of 2028), and an AWS Certified Cloud Practitioner. I solve data structures and algorithms in C++ and care about writing clean, working code that I can explain end to end.
             </p>
             <p>
-              My stack centers around modern frontend technologies and AI integration. I craft responsive landing pages, interactive UIs with React, cross-platform mobile apps using Flutter and Dart, and intelligent features like AI Chatbot Development. Every project I ship is clean, purposeful, and production-ready.
+              I&apos;m looking for a backend internship, and I also take on freelance projects for individuals and small businesses.
             </p>
-            <p>
-              I bring consistent execution, professional clean-code practices, and a sharp eye for detail. Having already built and deployed real-world applications used by real users, I focus on shipping highly reliable and optimized digital products.
-            </p>
-            <div className="about-tags">
+            <div className="about-tags mt-4">
               {tags.map((tag) => (
                 <span key={tag} className="about-tag">
                   {tag}
