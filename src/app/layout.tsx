@@ -4,19 +4,36 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://sahilsiddiqui.me"),
   title: {
-    default: "Mohd Sahil | Backend Developer (Node.js, Express, MongoDB)",
-    template: "%s | Mohd Sahil",
+    default: "Mohd Sahil Siddiqui | Backend Developer Portfolio",
+    template: "%s | Mohd Sahil Siddiqui",
   },
-  description: "Backend developer building REST APIs and web apps with Node.js, Express, and MongoDB. AWS Certified. Open to backend internships and freelance web projects.",
-  keywords: ["Mohd Sahil", "backend developer", "Node.js developer", "Express.js", "MongoDB", "REST API", "AWS Certified Cloud Practitioner", "web developer", "freelance web developer", "backend internship"],
-  authors: [{ name: "Mohd Sahil" }],
-  creator: "Mohd Sahil",
+  description: "Portfolio of Mohd Sahil Siddiqui (Mohd Sahil), a Backend Developer specializing in Node.js, Express, and MongoDB. AWS Certified. Open for backend roles and freelance projects.",
+  keywords: [
+    "Mohd Sahil",
+    "Mohd Sahil Siddiqui",
+    "Sahil Siddiqui",
+    "Mohd Sahil Portfolio",
+    "Sahil Siddiqui Developer",
+    "Mohd Sahil Developer",
+    "backend developer",
+    "backend dev",
+    "Node.js developer",
+    "Express.js",
+    "MongoDB",
+    "REST API",
+    "software engineer",
+    "AWS Certified Cloud Practitioner",
+    "freelance backend developer",
+    "backend internship"
+  ],
+  authors: [{ name: "Mohd Sahil Siddiqui" }],
+  creator: "Mohd Sahil Siddiqui",
   alternates: {
     canonical: "https://sahilsiddiqui.me",
   },
   openGraph: {
-    title: "Mohd Sahil | Backend Developer (Node.js, Express, MongoDB)",
-    description: "Backend developer building REST APIs and web apps with Node.js, Express, and MongoDB. AWS Certified. Open to backend internships and freelance web projects.",
+    title: "Mohd Sahil Siddiqui | Backend Developer Portfolio",
+    description: "Portfolio of Mohd Sahil Siddiqui (Mohd Sahil), a Backend Developer specializing in Node.js, Express, and MongoDB. AWS Certified. Open for backend roles and freelance projects.",
     url: "https://sahilsiddiqui.me",
     siteName: "Mohd Sahil",
     images: [
@@ -32,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohd Sahil | Backend Developer (Node.js, Express, MongoDB)",
-    description: "Backend developer building REST APIs and web apps with Node.js, Express, and MongoDB. AWS Certified. Open to backend internships and freelance web projects.",
+    title: "Mohd Sahil Siddiqui | Backend Developer Portfolio",
+    description: "Portfolio of Mohd Sahil Siddiqui (Mohd Sahil), a Backend Developer specializing in Node.js, Express, and MongoDB. AWS Certified. Open for backend roles and freelance projects.",
     images: ["/assets/Profile.webp"],
   },
   icons: {
@@ -60,7 +77,8 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Mohd Sahil",
+    name: "Mohd Sahil Siddiqui",
+    alternateName: ["Mohd Sahil", "Sahil Siddiqui"],
     jobTitle: "Backend Developer",
     url: "https://sahilsiddiqui.me",
     sameAs: [
